@@ -344,5 +344,5 @@ def write_results(filename, results, data_type):
 
 if __name__ == "__main__":
     opt = opts().parse()
-
+    opt.data_dir = "/vinai/pha.nguyen/"
     prefetch_test(opt)

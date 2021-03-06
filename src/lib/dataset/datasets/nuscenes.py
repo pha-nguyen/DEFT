@@ -72,9 +72,10 @@ class nuScenes(GenericDataset):
             ann_path = os.path.join(data_dir, "annotations", "test.json")
             img_dir = os.path.join(data_dir, "v1.0-test")
         else:
-            ann_path = os.path.join(data_dir, "annotations", "{}{}.json").format(
-                opt.dataset_version, split_name
-            )
+            # ann_path = os.path.join(data_dir, "annotations", "{}{}.json").format(
+            #     opt.dataset_version, split_name
+            # )
+            ann_path = "./tools/annotations/val.json"
 
         self.images = None
         super(nuScenes, self).__init__(opt, split, ann_path, img_dir)
